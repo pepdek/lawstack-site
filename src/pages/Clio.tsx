@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ContentSidebar } from '../components/ContentSidebar';
 import { SidebarCTA } from '../components/SidebarCTA';
 import { Breadcrumb } from '../components/Breadcrumb';
-import { APPS } from '../data/apps';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -16,35 +15,26 @@ const schema = {
     applicationCategory: 'LegalPracticeManagement',
     url: 'https://www.clio.com',
   },
-  mentions: APPS.map(app => ({
-    '@type': 'SoftwareApplication',
-    name: app.name,
-    url: `https://lawstack.co${app.path}`,
-  })),
 };
 
 const clioDataTable = [
-  { tool: 'Deadline Reminder', data: 'Matter names, statute dates, calendar events, task due dates' },
-  { tool: 'Unbilled Time Tracker', data: 'Uninvoiced time entries, hourly rates, matter names' },
-  { tool: 'New Matter Checklist', data: 'matter.created webhook, matter name and type' },
-  { tool: 'Invoice Reminder', data: 'Invoice status, invoice amounts, due dates, client contact' },
-  { tool: 'Trust Account Alert', data: 'Trust account balances per matter' },
-  { tool: 'Matter Profitability', data: 'Time entries, billed amounts, collected amounts by matter' },
-  { tool: 'Conflict Check Log', data: 'matter.created webhook, matter name, party names' },
-  { tool: 'Retainer Chaser', data: 'Matter status, contact records, retainer document status' },
+  { tool: 'Deadline Reminder', data: 'Matter names, statute dates, calendar events, task due dates', path: '/apps/deadline-reminder' },
+  { tool: 'Unbilled Time Tracker', data: 'Uninvoiced time entries, hourly rates, matter names', path: '/apps/unbilled-time-tracker' },
+  { tool: 'New Matter Checklist', data: 'matter.created webhook, matter name and type', path: '/apps/new-matter-checklist' },
+  { tool: 'Taita', data: 'Matter counts, time entries, billing totals, collection rates, trust balances — sourced from your connected practice management system', path: null },
 ];
 
 export default function Clio() {
   useEffect(() => {
     document.title = 'LawStack + Clio — Practice tools that connect to Clio for solo and small law firms';
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', 'LawStack builds eight single-function tools for Clio users. Read-only Clio API. No write access. No client data stored. WSBA RPC 1.6 compliant. Available in the Clio App Directory.');
+    if (desc) desc.setAttribute('content', 'LawStack builds a focused set of tools for Clio users. Read-only Clio API. No write access. No client data stored. WSBA RPC 1.6 compliant. Available in the Clio App Directory.');
   }, []);
 
   const sidebar = (
     <SidebarCTA
       eyebrow="CLIO-CONNECTED"
-      headline="Eight tools. One Clio connection each."
+      headline="A focused set of tools. One Clio connection each."
       body="Start with Deadline Reminder — free forever. Connect Clio in 90 seconds."
       primaryLabel="Connect Clio — free"
       primaryHref="https://deadline.lawstack.co"
@@ -59,7 +49,7 @@ export default function Clio() {
         <Breadcrumb items={[{ name: 'LawStack', href: '/' }, { name: 'Clio integration', href: '/clio' }]} />
         <h1 style={{ marginBottom: '24px' }}>LawStack tools that work with Clio</h1>
         <p style={{ fontSize: 'var(--text-lg)', marginBottom: '48px' }}>
-          LawStack builds eight single-function tools for attorneys who use Clio Manage. Each tool connects to Clio via OAuth, reads one category of operational data, and delivers a plain-text email when something needs attention. No dashboard. No login after setup. Available individually in the Clio App Directory.
+          LawStack builds a focused set of tools for attorneys who use Clio Manage. Each tool connects to Clio via OAuth, reads one category of operational data, and delivers a plain-text email when something needs attention. No dashboard. No login after setup. Available individually in the Clio App Directory.
         </p>
 
         <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '20px' }}>How the Clio connection works</h2>
@@ -88,19 +78,16 @@ export default function Clio() {
               </tr>
             </thead>
             <tbody>
-              {clioDataTable.map(row => {
-                const app = APPS.find(a => a.name === row.tool);
-                return (
-                  <tr key={row.tool} style={{ borderBottom: '1px solid var(--color-border)' }}>
-                    <td style={{ padding: '12px 0', paddingRight: '24px', color: 'var(--color-body)', verticalAlign: 'top' }}>
-                      {app ? (
-                        <Link to={app.path} style={{ color: 'var(--color-accent)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>{row.tool}</Link>
-                      ) : row.tool}
-                    </td>
-                    <td style={{ padding: '12px 0', color: 'var(--color-body)' }}>{row.data}</td>
-                  </tr>
-                );
-              })}
+              {clioDataTable.map(row => (
+                <tr key={row.tool} style={{ borderBottom: '1px solid var(--color-border)' }}>
+                  <td style={{ padding: '12px 0', paddingRight: '24px', color: 'var(--color-body)', verticalAlign: 'top' }}>
+                    {row.path ? (
+                      <Link to={row.path} style={{ color: 'var(--color-accent)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>{row.tool}</Link>
+                    ) : row.tool}
+                  </td>
+                  <td style={{ padding: '12px 0', color: 'var(--color-body)' }}>{row.data}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

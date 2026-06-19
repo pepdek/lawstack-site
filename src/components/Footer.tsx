@@ -5,11 +5,6 @@ const TOOLS_LINKS = [
   { label: 'Deadline Reminder', href: '/apps/deadline-reminder', external: false },
   { label: 'Unbilled Time Tracker', href: '/apps/unbilled-time-tracker', external: false },
   { label: 'New Matter Checklist', href: '/apps/new-matter-checklist', external: false },
-  { label: 'Invoice Reminder', href: '/apps/invoice-reminder', external: false },
-  { label: 'Trust Account Alert', href: '/apps/trust-account-alert', external: false },
-  { label: 'Matter Profitability', href: '/apps/matter-profitability', external: false },
-  { label: 'Conflict Check Log', href: '/apps/conflict-check-log', external: false },
-  { label: 'Retainer Chaser', href: '/apps/retainer-chaser', external: false },
   { label: 'Taita (Practice Intelligence)', href: 'https://iq.lawstack.co', external: true },
 ];
 

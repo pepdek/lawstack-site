@@ -20,17 +20,6 @@ const schema = {
   },
 };
 
-const PRICING = [
-  { name: 'Deadline Reminder', price: 'Free' },
-  { name: 'Unbilled Time Tracker', price: '$49/mo' },
-  { name: 'New Matter Checklist', price: '$29/mo' },
-  { name: 'Invoice Reminder', price: '$59/mo' },
-  { name: 'Trust Account Alert', price: '$49/mo' },
-  { name: 'Matter Profitability', price: '$49/mo' },
-  { name: 'Conflict Check Log', price: '$39/mo' },
-  { name: 'Retainer Chaser', price: '$49/mo' },
-];
-
 export default function Home() {
   useEffect(() => {
     document.title = "LawStack — Your Clio account is already tracking everything. Nobody's watching.";
@@ -145,7 +134,7 @@ export default function Home() {
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE MODEL</span>
           <h2 style={{ marginBottom: '48px', maxWidth: '640px' }}>
-            Seven tools. One Clio connection. Every problem watched automatically.
+            A focused set of tools. One Clio connection. Every problem watched automatically.
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)', maxWidth: '720px' }}>
             {[
@@ -180,7 +169,7 @@ export default function Home() {
       {/* THE TOOLS */}
       <section id="tools" style={{ background: 'var(--color-bg)', padding: 'var(--space-9) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
-          <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>SEVEN TOOLS</span>
+          <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE TOOLS</span>
           <h2 style={{ marginBottom: '48px' }}>One problem. One tool. One email.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 'var(--space-5)' }}>
             {PUBLIC_APPS.map(app => <AppCard key={app.id} app={app} />)}
@@ -225,23 +214,12 @@ export default function Home() {
       <section id="pricing" style={{ background: 'var(--color-bg)', padding: 'var(--space-9) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>PRICING</span>
-          <h2 style={{ marginBottom: '40px' }}>Start free. Add what you need.</h2>
-          <div style={{ maxWidth: '560px' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-              <tbody>
-                {PRICING.map(row => (
-                  <tr key={row.name} style={{ borderBottom: '1px solid var(--color-border)' }}>
-                    <td style={{ padding: '12px 0', fontSize: 'var(--text-sm)', color: 'var(--color-body)' }}>{row.name}</td>
-                    <td style={{ padding: '12px 0', fontSize: 'var(--text-sm)', fontFamily: 'var(--font-mono)', color: 'var(--color-accent)', textAlign: 'right' }}>{row.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p style={{ marginTop: '24px', fontSize: 'var(--text-sm)', color: 'var(--color-body)' }}>
-              Using 4 or more tools? Practice OS bundles all seven for $280/month.{' '}
-              <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-accent)' }}>Email us.</a>
-            </p>
-          </div>
+          <h2 style={{ marginBottom: '24px' }}>Start free. Add what you need.</h2>
+          <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
+            Pricing starts at free.{' '}
+            <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>Email hello@lawstack.co</a>
+            {' '}for details.
+          </p>
         </div>
       </section>
 
