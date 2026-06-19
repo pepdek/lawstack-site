@@ -89,7 +89,7 @@ export function AppLanding({ app, content, crossSellApp }: AppLandingProps) {
 
         <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>What it reads from Clio</h2>
         <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '40px' }}>
-          {app.clioData.map((item, i) => (
+          {(app.clioData ?? []).map((item, i) => (
             <li key={i} style={{ display: 'flex', gap: '10px', fontSize: 'var(--text-sm)' }}>
               <span style={{ color: 'var(--color-accent)', flexShrink: 0 }}>—</span>
               <span>{item}</span>

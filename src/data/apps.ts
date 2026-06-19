@@ -189,3 +189,6 @@ export const FULL_APPS: App[] = [
     ],
   },
 ];
+
+// Backward-compat alias — app landing pages and Clio.tsx import APPS
+export const APPS = FULL_APPS;
