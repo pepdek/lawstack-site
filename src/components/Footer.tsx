@@ -109,6 +109,18 @@ export default function Footer() {
               <FooterLink key={l.href} href={l.href} label={l.label} />
             ))}
           </div>
+
+          {/* Resources */}
+          <div>
+            <span style={colHeadStyle}>Resources</span>
+            <FooterLink href="/clio" label="Clio integration" />
+            <FooterLink href="/solo-law-firm-tools" label="Tools for solos" />
+            <FooterLink href="/legal-malpractice-prevention" label="Legal malpractice prevention" />
+            {/* /law-firm-billing-gaps — add when built */}
+            {/* /trust-account-compliance — add when built */}
+            {/* /washington-state-attorneys — add when built */}
+            {/* /clio-alternatives — add when built */}
+          </div>
         </div>
 
         <div style={{
