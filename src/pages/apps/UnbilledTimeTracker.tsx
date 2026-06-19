@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { AppLanding } from './AppLanding';
 import { APPS } from '../../data/apps';
 
@@ -29,6 +30,14 @@ export default function UnbilledTimeTracker() {
         ],
       }}
       crossSellApp={crossSell}
+      crossSellPrefix={
+        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: 'var(--space-3)' }}>
+          Understanding the full billing gap:{' '}
+          <Link to="/law-firm-billing-gaps" style={{ color: 'var(--color-accent)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
+            Where law firm revenue disappears before it's collected →
+          </Link>
+        </p>
+      }
     />
   );
 }

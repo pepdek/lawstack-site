@@ -13,9 +13,10 @@ interface AppLandingProps {
   app: App;
   content: AppContent;
   crossSellApp?: { name: string; path: string; crossSellLine: string };
+  crossSellPrefix?: React.ReactNode;
 }
 
-export function AppLanding({ app, content, crossSellApp }: AppLandingProps) {
+export function AppLanding({ app, content, crossSellApp, crossSellPrefix }: AppLandingProps) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -120,16 +121,21 @@ export function AppLanding({ app, content, crossSellApp }: AppLandingProps) {
         </ol>
 
         {/* Cross-sell */}
-        {crossSellApp && (
+        {(crossSellPrefix || crossSellApp) && (
           <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '32px' }}>
-            <span className="eyebrow" style={{ display: 'block', marginBottom: '12px' }}>NEXT IN THE STACK</span>
-            <p style={{ fontSize: 'var(--text-sm)', marginBottom: '12px' }}>{app.crossSellLine}</p>
-            <Link
-              to={crossSellApp.path}
-              style={{ color: 'var(--color-accent)', fontSize: 'var(--text-sm)', fontWeight: 500, textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
-            >
-              {crossSellApp.name} →
-            </Link>
+            {crossSellPrefix}
+            {crossSellApp && <span className="eyebrow" style={{ display: 'block', marginBottom: '12px' }}>NEXT IN THE STACK</span>}
+            {crossSellApp && (
+              <>
+                <p style={{ fontSize: 'var(--text-sm)', marginBottom: '12px' }}>{app.crossSellLine}</p>
+                <Link
+                  to={crossSellApp.path}
+                  style={{ color: 'var(--color-accent)', fontSize: 'var(--text-sm)', fontWeight: 500, textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
+                >
+                  {crossSellApp.name} →
+                </Link>
+              </>
+            )}
           </div>
         )}
       </ContentSidebar>

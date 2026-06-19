@@ -25,6 +25,7 @@ const RetainerChaser = lazy(() => import('./pages/apps/RetainerChaser'));
 const Taita = lazy(() => import('./pages/apps/Taita'));
 const SoloLawFirmTools = lazy(() => import('./pages/SoloLawFirmTools'));
 const LegalMalpracticePrevention = lazy(() => import('./pages/LegalMalpracticePrevention'));
+const LawFirmBillingGaps = lazy(() => import('./pages/LawFirmBillingGaps'));
 
 function Loading() {
   return (
@@ -67,6 +68,7 @@ const router = createBrowserRouter([
   { path: '/apps/taita', element: <Taita /> },
   { path: '/solo-law-firm-tools', element: <Layout><SoloLawFirmTools /></Layout> },
   { path: '/legal-malpractice-prevention', element: <Layout><LegalMalpracticePrevention /></Layout> },
+  { path: '/law-firm-billing-gaps', element: <Layout><LawFirmBillingGaps /></Layout> },
 ]);
 
 export default function App() {

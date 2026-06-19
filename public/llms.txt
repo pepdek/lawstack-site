@@ -20,6 +20,7 @@ Each tool solves one confirmed attorney pain. It connects to Clio via read-only 
 ## Related pages
 - **Legal malpractice prevention**: lawstack.co/legal-malpractice-prevention
 - **Solo law firm tools**: lawstack.co/solo-law-firm-tools
+- **Law firm billing gaps**: lawstack.co/law-firm-billing-gaps
 
 ## Clio integration
 All tools connect via Clio's standard OAuth 2.0 API. Read-only access only. LawStack cannot create, modify, or delete anything in your Clio account. Available in the Clio App Directory. Requires a paid Clio Manage plan (Essentials or higher).
