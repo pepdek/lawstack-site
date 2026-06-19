@@ -115,7 +115,8 @@ export default function Footer() {
             <FooterLink href="/clio" label="Clio integration" />
             <FooterLink href="/solo-law-firm-tools" label="Tools for solos" />
             <FooterLink href="/legal-malpractice-prevention" label="Legal malpractice prevention" />
-            {/* /law-firm-billing-gaps — add when built */}
+            <FooterLink href="/law-firm-billing-gaps" label="Law firm billing gaps" />
+            {/* /trust-account-compliance — add when built */}
             {/* /trust-account-compliance — add when built */}
             {/* /washington-state-attorneys — add when built */}
             {/* /clio-alternatives — add when built */}
