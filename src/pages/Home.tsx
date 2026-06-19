@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { EmailMockup } from '../components/EmailMockup';
 import { AppCard } from '../components/AppCard';
-import { APPS, TAITA } from '../data/apps';
+import { PUBLIC_APPS } from '../data/apps';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -29,7 +29,6 @@ const PRICING = [
   { name: 'Matter Profitability', price: '$49/mo' },
   { name: 'Conflict Check Log', price: '$39/mo' },
   { name: 'Retainer Chaser', price: '$49/mo' },
-  { name: 'Taita (Practice Intelligence)', price: 'See iq.lawstack.co' },
 ];
 
 export default function Home() {
@@ -184,25 +183,15 @@ export default function Home() {
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>SEVEN TOOLS</span>
           <h2 style={{ marginBottom: '48px' }}>One problem. One tool. One email.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 'var(--space-5)' }}>
-            {APPS.map(app => <AppCard key={app.id} app={app} />)}
-            {/* Taita card */}
-            <div style={{
-              background: 'var(--color-surface)',
-              border: '1px solid var(--color-border)',
-              borderRadius: 'var(--radius-md)',
-              padding: 'var(--space-6)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '12px',
-            }}>
-              <span className="eyebrow">PRACTICE INTELLIGENCE</span>
-              <h3 style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-headline)', fontSize: 'var(--text-2xl)', lineHeight: 'var(--leading-display)' }}>{TAITA.name}</h3>
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', flexGrow: 1 }}>{TAITA.tagline}</p>
-              <a href={TAITA.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 'var(--text-sm)', color: 'var(--color-cta)', fontWeight: 500, textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
-                Visit iq.lawstack.co →
-              </a>
-            </div>
+            {PUBLIC_APPS.map(app => <AppCard key={app.id} app={app} />)}
           </div>
+          <p style={{ marginTop: '32px', fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
+            More tools in development.{' '}
+            <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>
+              Email hello@lawstack.co
+            </a>
+            {' '}to be notified when the next one launches.
+          </p>
         </div>
       </section>
 

@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 
 const TOOLS_LINKS = [
-  { label: 'Deadline Reminder', href: 'https://deadline.lawstack.co', external: true },
-  { label: 'Unbilled Time Tracker', href: 'https://unbilled.lawstack.co', external: true },
-  { label: 'New Matter Checklist', href: 'https://newmatter.lawstack.co', external: true },
+  { label: 'Deadline Reminder', href: '/apps/deadline-reminder', external: false },
+  { label: 'Unbilled Time Tracker', href: '/apps/unbilled-time-tracker', external: false },
+  { label: 'New Matter Checklist', href: '/apps/new-matter-checklist', external: false },
   { label: 'Invoice Reminder', href: '/apps/invoice-reminder', external: false },
   { label: 'Trust Account Alert', href: '/apps/trust-account-alert', external: false },
   { label: 'Matter Profitability', href: '/apps/matter-profitability', external: false },

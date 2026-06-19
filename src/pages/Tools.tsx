@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { ContentSidebar } from '../components/ContentSidebar';
 import { SidebarCTA } from '../components/SidebarCTA';
 import { Breadcrumb } from '../components/Breadcrumb';
-import { APPS, TAITA } from '../data/apps';
+import { PUBLIC_APPS } from '../data/apps';
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'LawStack Tools',
   description: 'Single-function practice tools for Clio users',
-  itemListElement: APPS.map((app, i) => ({
+  itemListElement: PUBLIC_APPS.map((app, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     name: app.name,
@@ -52,7 +52,7 @@ export default function Tools() {
           Every tool LawStack builds solves one confirmed attorney pain. One sentence without the word "and." Connects to Clio. Delivers to your inbox. Runs automatically. The moment it requires you to remember to use it, it's failed its job.
         </p>
 
-        {APPS.map((app, i) => (
+        {PUBLIC_APPS.map((app, i) => (
           <div key={app.id}>
             {i > 0 && <hr style={{ border: 'none', borderTop: '1px solid var(--color-border)', margin: '48px 0' }} />}
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
@@ -113,28 +113,13 @@ export default function Tools() {
           </div>
         ))}
 
-        <hr style={{ border: 'none', borderTop: '1px solid var(--color-border)', margin: '48px 0' }} />
-
-        {/* Taita */}
-        <div>
-          <span className="eyebrow" style={{ display: 'block', marginBottom: '12px' }}>PRACTICE INTELLIGENCE · POWERED BY TAITA</span>
-          <h2 style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: 'var(--text-2xl)', color: 'var(--color-headline)', marginBottom: '12px', letterSpacing: '-0.01em', lineHeight: '1.2' }}>
-            {TAITA.name}
-          </h2>
-          <p style={{ marginBottom: '20px' }}>{TAITA.tagline}</p>
-          <a
-            href={TAITA.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center',
-              color: 'var(--color-cta)', fontWeight: 500, fontSize: 'var(--text-sm)',
-              textDecoration: 'none', minHeight: '44px', minWidth: 'auto',
-            }}
-          >
-            Visit iq.lawstack.co →
+        <p style={{ marginTop: '48px', fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
+          More tools in development.{' '}
+          <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>
+            Email hello@lawstack.co
           </a>
-        </div>
+          {' '}to be notified when the next one launches.
+        </p>
       </ContentSidebar>
     </>
   );

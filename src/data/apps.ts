@@ -10,12 +10,13 @@ export interface App {
   status: 'live' | 'qa' | 'planned';
   retentionArchetype: string;
   crossSellLine: string;
-  crossSellPath: string;
-  clioBadge: boolean;
-  clioData: string[];
+  // retained for AppLanding and AppCard compatibility
+  crossSellPath?: string;
+  clioBadge?: boolean;
+  clioData?: string[];
 }
 
-export const APPS: App[] = [
+export const PUBLIC_APPS: App[] = [
   {
     id: 'deadline-reminder',
     number: '01',
@@ -79,6 +80,10 @@ export const APPS: App[] = [
       'Client contact record',
     ],
   },
+];
+
+export const FULL_APPS: App[] = [
+  ...PUBLIC_APPS,
   {
     id: 'invoice-reminder',
     number: '04',
@@ -127,7 +132,7 @@ export const APPS: App[] = [
     tagline: 'Monthly email: every matter type ranked by effective hourly rate — hours logged, amount billed, amount collected, realization rate — sourced directly from Clio.',
     price: '$49/mo',
     priceNote: 'Day one charge',
-    url: '#',
+    url: '',
     path: '/apps/matter-profitability',
     status: 'planned',
     retentionArchetype: 'Identity-changing intelligence',
@@ -148,7 +153,7 @@ export const APPS: App[] = [
     tagline: 'Fires on every new Clio matter — logs a conflict check prompt, captures one-click confirmation, stores the record permanently as malpractice defense.',
     price: '$39/mo',
     priceNote: 'Day one charge',
-    url: '#',
+    url: '',
     path: '/apps/conflict-check-log',
     status: 'planned',
     retentionArchetype: 'Catastrophic prevention',
@@ -173,7 +178,7 @@ export const APPS: App[] = [
     path: '/apps/retainer-chaser',
     status: 'planned',
     retentionArchetype: 'Revenue recovery',
-    crossSellLine: 'Retainers are captured. Now make sure every deadline is visible.',
+    crossSellLine: '',
     crossSellPath: '/apps/deadline-reminder',
     clioBadge: true,
     clioData: [
@@ -184,11 +189,3 @@ export const APPS: App[] = [
     ],
   },
 ];
-
-export const TAITA = {
-  id: 'taita',
-  name: 'Taita',
-  tagline: 'Practice intelligence for solo and small law firms. One email, every Sunday, built from your actual practice data.',
-  url: 'https://iq.lawstack.co',
-  path: '/apps/taita',
-};
