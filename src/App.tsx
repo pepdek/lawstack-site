@@ -23,6 +23,7 @@ const MatterProfitability = lazy(() => import('./pages/apps/MatterProfitability'
 const ConflictCheckLog = lazy(() => import('./pages/apps/ConflictCheckLog'));
 const RetainerChaser = lazy(() => import('./pages/apps/RetainerChaser'));
 const Taita = lazy(() => import('./pages/apps/Taita'));
+const SoloLawFirmTools = lazy(() => import('./pages/SoloLawFirmTools'));
 
 function Loading() {
   return (
@@ -63,6 +64,7 @@ const router = createBrowserRouter([
   { path: '/apps/conflict-check-log', element: <Layout><ConflictCheckLog /></Layout> },
   { path: '/apps/retainer-chaser', element: <Layout><RetainerChaser /></Layout> },
   { path: '/apps/taita', element: <Taita /> },
+  { path: '/solo-law-firm-tools', element: <Layout><SoloLawFirmTools /></Layout> },
 ]);
 
 export default function App() {

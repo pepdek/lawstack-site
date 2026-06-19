@@ -16,6 +16,7 @@ Each tool solves one confirmed attorney pain. It connects to Clio via read-only 
 - **Conflict Check Log** ($39/mo) — Fires on every new matter. Logs conflict check prompt. Stores attorney confirmation as malpractice defense record. lawstack.co/apps/conflict-check-log
 - **Retainer Chaser** ($49/mo) — When an active matter has no signed retainer, fires a 3-touch sequence. Stops when retainer is signed. lawstack.co/apps/retainer-chaser
 - **Taita** — Practice intelligence. One email every Sunday from your actual practice data. iq.lawstack.co
+- **Solo law firm tools overview**: lawstack.co/solo-law-firm-tools
 
 ## Clio integration
 All tools connect via Clio's standard OAuth 2.0 API. Read-only access only. LawStack cannot create, modify, or delete anything in your Clio account. Available in the Clio App Directory. Requires a paid Clio Manage plan (Essentials or higher).
