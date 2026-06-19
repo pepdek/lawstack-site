@@ -238,7 +238,7 @@ export default function Home() {
               </tbody>
             </table>
             <p style={{ marginTop: '24px', fontSize: 'var(--text-sm)', color: 'var(--color-body)' }}>
-              Using 4 or more tools? Practice OS bundles all seven for $179/month.{' '}
+              Using 4 or more tools? Practice OS bundles all seven for $280/month.{' '}
               <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-accent)' }}>Email us.</a>
             </p>
           </div>
