@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://lawstack.co/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://lawstack.co/tools</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://lawstack.co/clio</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/deadline-reminder</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/unbilled-time-tracker</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/new-matter-checklist</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/invoice-reminder</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/trust-account-alert</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/matter-profitability</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/conflict-check-log</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/apps/retainer-chaser</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/about</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/changelog</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://lawstack.co/status</loc><priority>0.5</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://lawstack.co/support</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://lawstack.co/terms</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://lawstack.co/privacy</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://lawstack.co/data-security</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://lawstack.co/compliance</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+</urlset>

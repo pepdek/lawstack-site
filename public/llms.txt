@@ -1,0 +1,27 @@
+# LawStack
+> LawStack builds single-function practice tools for solo and small law firms that use Clio.
+
+LawStack Inc. is a Washington state corporation based in Tacoma, WA. We build a portfolio of single-function tools that connect to Clio Manage via OAuth, read one category of operational data, and deliver practice intelligence by plain-text email. No dashboards. No login after setup. Zero configuration after the initial Clio connection.
+
+## What LawStack does
+Each tool solves one confirmed attorney pain. It connects to Clio via read-only OAuth. It runs on a schedule or webhook. It sends one email. It stops when the problem is resolved.
+
+## The tools
+- **Deadline Reminder** (free) — Every Monday at 7am, every deadline across all open Clio matters, each linked to the matter. lawstack.co/apps/deadline-reminder
+- **Unbilled Time Tracker** ($49/mo) — Every Sunday at 6pm, every uninvoiced time entry and its dollar value. lawstack.co/apps/unbilled-time-tracker
+- **New Matter Checklist** ($29/mo) — Fires within 60 seconds of matter.created in Clio. Intake checklist delivered to attorney. lawstack.co/apps/new-matter-checklist
+- **Invoice Reminder** ($59/mo) — When a Clio invoice goes unpaid past the attorney's threshold, sends a professional reminder to the client. Stops when paid. lawstack.co/apps/invoice-reminder
+- **Trust Account Alert** ($49/mo) — Weekly scan of Clio trust balances. Alert fires before any balance drops below threshold. lawstack.co/apps/trust-account-alert
+- **Matter Profitability** ($49/mo) — Monthly email: every matter type ranked by effective hourly rate, realization rate, and collected amount. lawstack.co/apps/matter-profitability
+- **Conflict Check Log** ($39/mo) — Fires on every new matter. Logs conflict check prompt. Stores attorney confirmation as malpractice defense record. lawstack.co/apps/conflict-check-log
+- **Retainer Chaser** ($49/mo) — When an active matter has no signed retainer, fires a 3-touch sequence. Stops when retainer is signed. lawstack.co/apps/retainer-chaser
+- **Taita** — Practice intelligence. One email every Sunday from your actual practice data. iq.lawstack.co
+
+## Clio integration
+All tools connect via Clio's standard OAuth 2.0 API. Read-only access only. LawStack cannot create, modify, or delete anything in your Clio account. Available in the Clio App Directory. Requires a paid Clio Manage plan (Essentials or higher).
+
+## Compliance
+WSBA RPC 1.6 compliant. LawStack accesses operational metadata only — matter names, dates, billing totals, trust balances. No client confidential information is accessed, stored, or processed. No model training on attorney data.
+
+## Contact
+LawStack Inc. · Tacoma, WA · hello@lawstack.co · lawstack.co
