@@ -13,7 +13,6 @@ const COMPANY_LINKS = [
   { label: 'Changelog', href: '/changelog' },
   { label: 'Status', href: '/status' },
   { label: 'Support', href: '/support' },
-  { label: 'Clio integration', href: '/clio' },
 ];
 
 const LEGAL_LINKS = [

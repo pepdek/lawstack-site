@@ -40,7 +40,7 @@ export default function Home() {
           <div className="hero-grid" style={{ display: 'contents' }}>
             <div>
               <span className="eyebrow" style={{ display: 'block', marginBottom: '20px' }}>
-                CLIO-CONNECTED · PLAIN-TEXT EMAIL · NO DASHBOARD
+                BUILT FOR SOLOS AND SMALL FIRMS · CLIO-CONNECTED · NO DASHBOARD
               </span>
               <h1 style={{ marginBottom: '24px' }}>
                 Your Clio account is already tracking everything. Nobody's watching.
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* THE PROBLEM */}
-      <section style={{ background: 'var(--color-bg)', padding: 'var(--space-9) var(--space-5)' }}>
+      <section style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE GAP</span>
           <h2 style={{ marginBottom: '48px', maxWidth: '720px' }}>
@@ -130,11 +130,11 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section style={{ background: 'var(--color-bg)', padding: 'var(--space-9) var(--space-5)' }}>
+      <section style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE MODEL</span>
           <h2 style={{ marginBottom: '48px', maxWidth: '640px' }}>
-            A focused set of tools. One Clio connection. Every problem watched automatically.
+            Connect once. It watches. You practice.
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)', maxWidth: '720px' }}>
             {[
@@ -167,7 +167,7 @@ export default function Home() {
       </section>
 
       {/* THE TOOLS */}
-      <section id="tools" style={{ background: 'var(--color-bg)', padding: 'var(--space-9) var(--space-5)' }}>
+      <section id="tools" style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE TOOLS</span>
           <h2 style={{ marginBottom: '48px' }}>One problem. One tool. One email.</h2>
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* WHAT IT NEVER DOES */}
-      <section style={{ background: 'var(--color-bg)', padding: 'var(--space-9) var(--space-5)' }}>
+      <section style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>TRUST</span>
           <h2 style={{ marginBottom: '48px', maxWidth: '680px' }}>We read the billing layer. We never touch the practice layer.</h2>
@@ -211,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" style={{ background: 'var(--color-bg)', padding: 'var(--space-9) var(--space-5)' }}>
+      <section id="pricing" style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>PRICING</span>
           <h2 style={{ marginBottom: '24px' }}>Start free. Add what you need.</h2>
@@ -224,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* BOTTOM CTA */}
-      <section style={{ background: 'var(--color-surface)', padding: 'var(--space-9) var(--space-5)' }}>
+      <section style={{ background: 'var(--color-surface)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-prose)', margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{ marginBottom: '16px' }}>LawStack watches your practice while you practice law.</h2>
           <p style={{ fontSize: 'var(--text-lg)', marginBottom: '32px' }}>Start with Deadline Reminder. Free forever. Connect in 90 seconds.</p>

@@ -49,7 +49,7 @@ export default function Tools() {
         <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE PORTFOLIO</span>
         <h1 style={{ marginBottom: '24px' }}>A focused set of tools. One problem each. Nothing more.</h1>
         <p style={{ fontSize: 'var(--text-lg)', marginBottom: '48px' }}>
-          Every tool LawStack builds solves one confirmed attorney pain. One sentence without the word "and." Connects to Clio. Delivers to your inbox. Runs automatically. The moment it requires you to remember to use it, it's failed its job.
+          Every tool LawStack builds solves one confirmed attorney pain. Connects to Clio. Delivers to your inbox. Runs automatically. The moment it requires you to remember to use it, it's failed its job.
         </p>
 
         {PUBLIC_APPS.map((app, i) => (
