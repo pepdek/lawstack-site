@@ -98,11 +98,11 @@ export default function Nav() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile menu toggle */}
         <button
           className="nav-hamburger"
           onClick={() => setOpen(!open)}
-          aria-label="Open navigation menu"
+          aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={open}
           style={{
             background: 'transparent',
@@ -110,17 +110,18 @@ export default function Nav() {
             cursor: 'pointer',
             padding: '8px',
             display: 'flex',
-            flexDirection: 'column',
-            gap: '5px',
-            minHeight: '44px',
-            minWidth: '44px',
             alignItems: 'center',
             justifyContent: 'center',
+            minHeight: '44px',
+            minWidth: '44px',
+            fontFamily: 'var(--font-sans)',
+            fontWeight: 500,
+            fontSize: 'var(--text-sm)',
+            color: 'var(--color-headline)',
+            letterSpacing: '0.02em',
           }}
         >
-          <span style={{ display: 'block', width: '22px', height: '2px', background: 'var(--color-headline)', transition: 'transform 150ms ease', transform: open ? 'translateY(7px) rotate(45deg)' : 'none' }} />
-          <span style={{ display: 'block', width: '22px', height: '2px', background: 'var(--color-headline)', opacity: open ? 0 : 1, transition: 'opacity 150ms ease' }} />
-          <span style={{ display: 'block', width: '22px', height: '2px', background: 'var(--color-headline)', transition: 'transform 150ms ease', transform: open ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
+          {open ? 'Close' : 'Menu'}
         </button>
       </nav>
 
