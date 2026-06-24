@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 
 const TOOLS_LINKS = [
-  { label: 'Deadline Reminder', href: '/apps/deadline-reminder', external: false },
-  { label: 'Unbilled Time Tracker', href: '/apps/unbilled-time-tracker', external: false },
-  { label: 'New Matter Checklist', href: '/apps/new-matter-checklist', external: false },
+  { label: 'Billing Coordinator', href: '/#billing-coordinator', external: false },
+  { label: 'Practice Coordinator', href: '/#practice-coordinator', external: false },
+  { label: 'Client Coordinator', href: '/#client-coordinator', external: false },
   { label: 'Taita (Practice Intelligence)', href: 'https://iq.lawstack.co', external: true },
 ];
 

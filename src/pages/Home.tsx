@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { EmailMockup } from '../components/EmailMockup';
 import { AppCard } from '../components/AppCard';
-import { PUBLIC_APPS } from '../data/apps';
+import { APPS } from '../data/apps';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -171,9 +171,55 @@ export default function Home() {
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE TOOLS</span>
           <h2 style={{ marginBottom: '48px' }}>One problem. One tool. One email.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 'var(--space-5)' }}>
-            {PUBLIC_APPS.map(app => <AppCard key={app.id} app={app} />)}
+
+          {/* BILLING COORDINATOR */}
+          <div id="billing-coordinator" style={{ marginBottom: 'var(--space-7)' }}>
+            <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>BILLING COORDINATOR</span>
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '24px' }}>
+              Watches your money while you practice law. High-agency from day one.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 'var(--space-5)' }}>
+              {[
+                APPS.find(a => a.id === 'unbilled-time-tracker')!,
+                APPS.find(a => a.id === 'new-matter-checklist')!,
+              ].map(app => <AppCard key={app.id} app={app} />)}
+              {/* Invoice Reminder — coming soon */}
+              {/* Trust Account Alert — coming soon */}
+              {/* Retainer Chaser — coming soon */}
+            </div>
           </div>
+
+          {/* PRACTICE COORDINATOR */}
+          <div id="practice-coordinator" style={{ marginBottom: 'var(--space-7)' }}>
+            <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>PRACTICE COORDINATOR</span>
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '24px' }}>
+              Watches your deadlines and matter workflow.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 'var(--space-5)' }}>
+              <AppCard app={APPS.find(a => a.id === 'deadline-reminder')!} />
+              {/* Matter Close Checklist — coming soon */}
+            </div>
+          </div>
+
+          {/* CLIENT COORDINATOR */}
+          <div id="client-coordinator">
+            <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>CLIENT COORDINATOR</span>
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '24px' }}>
+              Watches your client relationships.
+            </p>
+            <div style={{
+              background: 'var(--color-surface)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-md)',
+              padding: 'var(--space-6)',
+              maxWidth: '480px',
+            }}>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', margin: 0 }}>
+                Client Coordinator tools ship after Billing Coordinator reaches full capability.
+              </p>
+            </div>
+          </div>
+
           <p style={{ marginTop: '32px', fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
             More tools in development.{' '}
             <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>
