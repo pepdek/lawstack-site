@@ -342,17 +342,14 @@ Next brief:              Monday, June 30`}</pre>
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: 'block',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
               width: 'fit-content',
-              marginLeft: 'auto',
-              marginRight: 'auto',
+              marginLeft: 'auto', marginRight: 'auto', marginTop: 'var(--space-6)',
               background: 'var(--color-cta)', color: 'var(--color-cta-text)',
               fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: 'var(--text-sm)',
               padding: '12px 32px', borderRadius: 'var(--radius-md)',
               textDecoration: 'none', minHeight: '44px',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              marginTop: 'var(--space-6)',
-            } as React.CSSProperties}
+            }}
           >
             Connect Your Clio.
           </a>
