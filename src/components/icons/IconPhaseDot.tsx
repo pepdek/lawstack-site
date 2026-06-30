@@ -1,0 +1,7 @@
+export function IconPhaseDot({ active = false }: { active?: boolean }) {
+  return (
+    <svg width="8" height="8" viewBox="0 0 8 8">
+      <circle cx="4" cy="4" r="4" fill={active ? 'var(--color-accent)' : 'var(--color-border)'} />
+    </svg>
+  );
+}
