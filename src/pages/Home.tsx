@@ -28,10 +28,6 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <a className="mobile-cta-bar" href="https://deadline.lawstack.co" target="_blank" rel="noopener noreferrer">
-        Get Deadline Reminder — free
-      </a>
-
       {/* HERO */}
       <section id="main-content" style={{ padding: '96px 24px 80px', background: 'var(--color-bg)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr', gap: '48px', alignItems: 'center' }}>
@@ -47,32 +43,17 @@ export default function Home() {
                 LawStack connects to Clio in 90 seconds. It watches your deadlines, your unbilled time, your unpaid invoices, your trust balances. One email per tool, on schedule, no login required. You practice law. LawStack watches the practice.
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
-                <a
-                  href="https://deadline.lawstack.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/billing-coordinator"
                   style={{
                     display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                     background: 'var(--color-cta)', color: 'var(--color-cta-text)',
                     fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: 'var(--text-base)',
                     padding: '14px 28px', borderRadius: 'var(--radius-md)',
                     textDecoration: 'none', minHeight: '44px',
-                    transition: 'background var(--transition-fast)',
                   }}
                 >
-                  Start with Deadline Reminder — it's free
-                </a>
-                <Link
-                  to="/tools"
-                  style={{
-                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                    background: 'transparent', color: 'var(--color-body)',
-                    fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: 'var(--text-base)',
-                    padding: '14px 28px', borderRadius: 'var(--radius-md)',
-                    border: '1px solid var(--color-border-strong)', textDecoration: 'none', minHeight: '44px',
-                  }}
-                >
-                  See all tools →
+                  Meet Your Billing Coordinator
                 </Link>
               </div>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--color-muted)' }}>
@@ -352,34 +333,6 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Micro-app cross-sell */}
-          <div style={{ marginTop: 'var(--space-7)', paddingTop: 'var(--space-6)', borderTop: '1px solid var(--color-border)' }}>
-            <span style={{ display: 'block', fontSize: 'var(--text-xs)', fontWeight: 500, color: 'var(--color-muted)', textTransform: 'uppercase' as const, letterSpacing: '0.08em', marginBottom: 'var(--space-3)' }}>
-              ALSO IN THE STACK
-            </span>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', lineHeight: 1.65 }}>
-              {[
-                { label: 'Deadline Reminder', href: 'https://deadline.lawstack.co' },
-                { label: 'Unbilled Time Tracker', href: 'https://unbilled.lawstack.co' },
-                { label: 'New Matter Checklist', href: 'https://newmatter.lawstack.co' },
-              ].map((tool, i) => (
-                <span key={tool.label}>
-                  {i > 0 && ' · '}
-                  <a
-                    href={tool.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-accent)'; (e.currentTarget as HTMLAnchorElement).style.textDecoration = 'underline'; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-muted)'; (e.currentTarget as HTMLAnchorElement).style.textDecoration = 'none'; }}
-                  >
-                    {tool.label}
-                  </a>
-                </span>
-              ))}
-            </p>
-          </div>
-
         </div>
       </section>
 
@@ -426,11 +379,9 @@ export default function Home() {
       <section style={{ background: 'var(--color-surface)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-prose)', margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{ marginBottom: '16px' }}>LawStack watches your practice while you practice law.</h2>
-          <p style={{ fontSize: 'var(--text-lg)', marginBottom: '32px' }}>Start with Deadline Reminder. Free forever. Connect in 90 seconds.</p>
-          <a
-            href="https://deadline.lawstack.co"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p style={{ fontSize: 'var(--text-lg)', marginBottom: '32px' }}>Connect Clio in 10 minutes. Your first brief arrives Monday morning.</p>
+          <Link
+            to="/billing-coordinator"
             style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               background: 'var(--color-cta)', color: 'var(--color-cta-text)',
@@ -439,8 +390,8 @@ export default function Home() {
               textDecoration: 'none', minHeight: '44px',
             }}
           >
-            Get Deadline Reminder — free
-          </a>
+            Meet Your Billing Coordinator
+          </Link>
         </div>
       </section>
     </>
