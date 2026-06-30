@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { EmailMockup } from '../components/EmailMockup';
-import { AppCard } from '../components/AppCard';
-import { APPS } from '../data/apps';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -166,67 +164,222 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THE TOOLS */}
-      <section id="tools" style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
+      {/* THE ROLES */}
+      <section id="roles" style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
-          <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE TOOLS</span>
-          <h2 style={{ marginBottom: '48px' }}>One problem. One tool. One email.</h2>
 
-          {/* BILLING COORDINATOR */}
-          <div id="billing-coordinator" style={{ marginBottom: 'var(--space-7)' }}>
-            <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>BILLING COORDINATOR</span>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '24px' }}>
-              Watches your money while you practice law. High-agency from day one.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 'var(--space-5)' }}>
-              {[
-                APPS.find(a => a.id === 'unbilled-time-tracker')!,
-                APPS.find(a => a.id === 'new-matter-checklist')!,
-              ].map(app => <AppCard key={app.id} app={app} />)}
-              {/* Invoice Reminder — coming soon */}
-              {/* Trust Account Alert — coming soon */}
-              {/* Retainer Chaser — coming soon */}
-            </div>
-          </div>
+          {/* Section header */}
+          <span className="eyebrow" style={{ display: 'block', marginBottom: '12px' }}>
+            THE STAFF YOUR FIRM NEEDS. AT A PRICE IT CAN AFFORD.
+          </span>
+          <h2 style={{ marginBottom: 'var(--space-4)', maxWidth: '640px' }}>
+            Your AI-employee team.
+          </h2>
+          <p style={{ fontSize: 'var(--text-lg)', color: 'var(--color-body)', lineHeight: 1.65, maxWidth: '600px', marginBottom: 'var(--space-7)' }}>
+            Small firms can't justify a $65K billing coordinator, a $55K admin
+            assistant, or a $50K intake coordinator. LawStack fills those roles
+            at a fraction of the cost — already knows Clio, works 24/7,
+            reports every Monday.
+          </p>
 
-          {/* PRACTICE COORDINATOR */}
-          <div id="practice-coordinator" style={{ marginBottom: 'var(--space-7)' }}>
-            <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>PRACTICE COORDINATOR</span>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '24px' }}>
-              Watches your deadlines and matter workflow.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 'var(--space-5)' }}>
-              <AppCard app={APPS.find(a => a.id === 'deadline-reminder')!} />
-              {/* Matter Close Checklist — coming soon */}
-            </div>
-          </div>
+          {/* Three role cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-5)' }}>
 
-          {/* CLIENT COORDINATOR */}
-          <div id="client-coordinator">
-            <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>CLIENT COORDINATOR</span>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '24px' }}>
-              Watches your client relationships.
-            </p>
+            {/* Card 1 — Billing Coordinator (LIVE) */}
             <div style={{
               background: 'var(--color-surface)',
-              border: '1px solid var(--color-border)',
-              borderRadius: 'var(--radius-md)',
+              borderRadius: 'var(--radius-lg)',
               padding: 'var(--space-6)',
-              maxWidth: '480px',
+              border: '1px solid var(--color-border)',
+              borderTop: '2px solid var(--color-accent)',
+              display: 'flex',
+              flexDirection: 'column',
             }}>
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', margin: 0 }}>
-                Client Coordinator tools ship after Billing Coordinator reaches full capability.
+              <div style={{ fontSize: 'var(--text-xs)', fontWeight: 500, color: 'var(--color-accent)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                AVAILABLE NOW
+              </div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 'var(--text-2xl)', color: 'var(--color-headline)', marginTop: 'var(--space-3)', lineHeight: 1.1 }}>
+                Billing Coordinator
+              </h3>
+              <div style={{ fontWeight: 600, fontSize: 'var(--text-sm)', color: 'var(--color-headline)', marginTop: 'var(--space-2)' }}>
+                $149/month vs. $65,000/year
+              </div>
+              <p style={{ fontSize: 'var(--text-base)', color: 'var(--color-body)', lineHeight: 1.65, marginTop: 'var(--space-3)' }}>
+                Watches every invoice, every trust account, and every unbilled
+                time entry. Sends one email every Monday morning. Runs 24/7.
+                Starts the moment you connect Clio.
               </p>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginTop: 'var(--space-3)' }}>
+                Replaces: billing coordinator at $65–75K/year fully loaded
+              </p>
+              <div style={{ marginTop: 'auto', paddingTop: 'var(--space-5)' }}>
+                <Link
+                  to="/billing-coordinator"
+                  style={{
+                    display: 'inline-block',
+                    background: 'var(--color-cta)',
+                    color: 'var(--color-cta-text)',
+                    fontFamily: 'var(--font-sans)',
+                    fontWeight: 600,
+                    fontSize: 'var(--text-sm)',
+                    padding: '10px 20px',
+                    borderRadius: 'var(--radius-md)',
+                    textDecoration: 'none',
+                    minHeight: '44px',
+                    lineHeight: '24px',
+                  }}
+                >
+                  Meet Your Billing Coordinator
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 2 — Legal Admin Assistant (COMING SOON) */}
+            <div style={{
+              background: 'var(--color-surface)',
+              borderRadius: 'var(--radius-lg)',
+              padding: 'var(--space-6)',
+              border: '1px solid var(--color-border)',
+              display: 'flex',
+              flexDirection: 'column',
+            }}>
+              <div style={{ fontSize: 'var(--text-xs)', fontWeight: 500, color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                COMING SOON
+              </div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 'var(--text-2xl)', color: 'var(--color-headline)', marginTop: 'var(--space-3)', lineHeight: 1.1 }}>
+                Legal Admin Assistant
+              </h3>
+              <div style={{ fontWeight: 600, fontSize: 'var(--text-sm)', color: 'var(--color-headline)', marginTop: 'var(--space-2)' }}>
+                $149/month vs. $55,000/year
+              </div>
+              <p style={{ fontSize: 'var(--text-base)', color: 'var(--color-body)', lineHeight: 1.65, marginTop: 'var(--space-3)' }}>
+                Handles scheduling, routine correspondence, deadline tracking,
+                and matter file organization across every open matter. Reports
+                every Monday. Never calls in sick.
+              </p>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginTop: 'var(--space-3)' }}>
+                Replaces: legal admin assistant at $50–65K/year fully loaded
+              </p>
+              <div style={{ marginTop: 'auto', paddingTop: 'var(--space-5)' }}>
+                <a
+                  href="mailto:hello@lawstack.co?subject=Legal Admin Assistant — notify me&body=Please notify me when the Legal Admin Assistant is available."
+                  style={{
+                    display: 'inline-block',
+                    background: 'transparent',
+                    color: 'var(--color-muted)',
+                    fontFamily: 'var(--font-sans)',
+                    fontWeight: 600,
+                    fontSize: 'var(--text-sm)',
+                    padding: '10px 20px',
+                    borderRadius: 'var(--radius-md)',
+                    border: '1px solid var(--color-border)',
+                    textDecoration: 'none',
+                    minHeight: '44px',
+                    lineHeight: '24px',
+                    cursor: 'default',
+                  }}
+                >
+                  Notify Me When Available
+                </a>
+              </div>
+            </div>
+
+            {/* Card 3 — Client Intake Coordinator (COMING SOON) */}
+            <div style={{
+              background: 'var(--color-surface)',
+              borderRadius: 'var(--radius-lg)',
+              padding: 'var(--space-6)',
+              border: '1px solid var(--color-border)',
+              display: 'flex',
+              flexDirection: 'column',
+            }}>
+              <div style={{ fontSize: 'var(--text-xs)', fontWeight: 500, color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                COMING SOON
+              </div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 'var(--text-2xl)', color: 'var(--color-headline)', marginTop: 'var(--space-3)', lineHeight: 1.1 }}>
+                Client Intake Coordinator
+              </h3>
+              <div style={{ fontWeight: 600, fontSize: 'var(--text-sm)', color: 'var(--color-headline)', marginTop: 'var(--space-2)' }}>
+                $149/month vs. $52,000/year
+              </div>
+              <p style={{ fontSize: 'var(--text-base)', color: 'var(--color-body)', lineHeight: 1.65, marginTop: 'var(--space-3)' }}>
+                Follows up on every new inquiry within minutes, delivers intake
+                forms, tracks engagement letters, and reports lead conversion
+                every Monday. No lead goes cold.
+              </p>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginTop: 'var(--space-3)' }}>
+                Replaces: client intake coordinator at $48–58K/year fully loaded
+              </p>
+              <div style={{ marginTop: 'auto', paddingTop: 'var(--space-5)' }}>
+                <a
+                  href="mailto:hello@lawstack.co?subject=Client Intake Coordinator — notify me&body=Please notify me when the Client Intake Coordinator is available."
+                  style={{
+                    display: 'inline-block',
+                    background: 'transparent',
+                    color: 'var(--color-muted)',
+                    fontFamily: 'var(--font-sans)',
+                    fontWeight: 600,
+                    fontSize: 'var(--text-sm)',
+                    padding: '10px 20px',
+                    borderRadius: 'var(--radius-md)',
+                    border: '1px solid var(--color-border)',
+                    textDecoration: 'none',
+                    minHeight: '44px',
+                    lineHeight: '24px',
+                    cursor: 'default',
+                  }}
+                >
+                  Notify Me When Available
+                </a>
+              </div>
             </div>
           </div>
 
-          <p style={{ marginTop: '32px', fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
-            More tools in development.{' '}
-            <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>
-              Email hello@lawstack.co
-            </a>
-            {' '}to be notified when the next one launches.
-          </p>
+          {/* Stack math */}
+          <div style={{ marginTop: 'var(--space-7)', textAlign: 'center' }}>
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
+              Full team deployment: all five roles at $30,000/year.
+            </p>
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginTop: 'var(--space-2)' }}>
+              A comparable human team costs $300,000–400,000/year.
+            </p>
+          </div>
+
+          {/* Brand line */}
+          <div style={{ marginTop: 'var(--space-6)', textAlign: 'center' }}>
+            <span className="eyebrow" style={{ color: 'var(--color-accent)' }}>
+              LAWSTACK WATCHES YOUR PRACTICE WHILE YOU PRACTICE LAW
+            </span>
+          </div>
+
+          {/* Micro-app cross-sell */}
+          <div style={{ marginTop: 'var(--space-7)', paddingTop: 'var(--space-6)', borderTop: '1px solid var(--color-border)' }}>
+            <span style={{ display: 'block', fontSize: 'var(--text-xs)', fontWeight: 500, color: 'var(--color-muted)', textTransform: 'uppercase' as const, letterSpacing: '0.08em', marginBottom: 'var(--space-3)' }}>
+              ALSO IN THE STACK
+            </span>
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', lineHeight: 1.65 }}>
+              {[
+                { label: 'Deadline Reminder', href: 'https://deadline.lawstack.co' },
+                { label: 'Unbilled Time Tracker', href: 'https://unbilled.lawstack.co' },
+                { label: 'New Matter Checklist', href: 'https://newmatter.lawstack.co' },
+              ].map((tool, i) => (
+                <span key={tool.label}>
+                  {i > 0 && ' · '}
+                  <a
+                    href={tool.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-accent)'; (e.currentTarget as HTMLAnchorElement).style.textDecoration = 'underline'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-muted)'; (e.currentTarget as HTMLAnchorElement).style.textDecoration = 'none'; }}
+                  >
+                    {tool.label}
+                  </a>
+                </span>
+              ))}
+            </p>
+          </div>
+
         </div>
       </section>
 
