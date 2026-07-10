@@ -205,8 +205,8 @@ export default function LegalMalpracticePrevention() {
         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '16px' }}>
           What this prevents: missed filing deadlines, missed response windows, missed statute of limitations dates.
         </p>
-        <Link to="/apps/deadline-reminder" style={{ color: 'var(--color-accent)', fontSize: 'var(--text-sm)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
-          Deadline Reminder — free →
+        <Link to="/billing-coordinator" style={{ color: 'var(--color-accent)', fontSize: 'var(--text-sm)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
+          The Billing Coordinator's Monday brief surfaces every deadline and time-sensitive matter across your open Clio matters. →
         </Link>
 
         {/* Gap 2 — Conflict checks */}
@@ -224,12 +224,9 @@ export default function LegalMalpracticePrevention() {
         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '16px' }}>
           What this prevents: undocumented conflict of interest exposure, bar complaints arising from inadequate conflict procedures.
         </p>
-        <span style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
-          Conflict Check Log — $39/month —{' '}
-          <Link to="/apps/conflict-check-log" style={{ color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
-            coming soon
-          </Link>
-        </span>
+        <Link to="/billing-coordinator" style={{ color: 'var(--color-accent)', fontSize: 'var(--text-sm)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
+          Conflict check documentation is on the Legal Ops Specialist roadmap. →
+        </Link>
 
         {/* Gap 3 — Trust account */}
         {tealRule}
@@ -243,17 +240,14 @@ export default function LegalMalpracticePrevention() {
         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBottom: '16px' }}>
           What this prevents: IOLTA threshold violations, bar complaints arising from trust account errors.
         </p>
-        <span style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
-          Trust Account Alert — $49/month —{' '}
-          <Link to="/apps/trust-account-alert" style={{ color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
-            coming soon
-          </Link>
-        </span>
+        <Link to="/billing-coordinator" style={{ color: 'var(--color-accent)', fontSize: 'var(--text-sm)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
+          The Billing Coordinator monitors every client trust balance daily and alerts you before a threshold is breached. →
+        </Link>
 
         {/* Cost vs prevention */}
         <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px', marginTop: '48px' }}>What this costs versus what it prevents</h2>
         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', marginBottom: '24px' }}>
-          A single malpractice claim costs an average of $30,000 to defend, even when the attorney wins. That figure does not include the time lost, the reputational impact, or the bar inquiry that may accompany it. The three tools above cost a combined $88 per month when all three are live. The math does not require elaboration.
+          A single malpractice claim costs an average of $30,000 to defend, even when the attorney wins. That figure does not include the time lost, the reputational impact, or the bar inquiry that may accompany it. The Billing Coordinator costs $149/month. One billing coordinator who monitors trust accounts, flags overdue invoices, and surfaces deadline-adjacent billing issues — before they compound into claims.
         </p>
         <blockquote style={{
           borderLeft: '3px solid var(--color-accent)',
@@ -325,9 +319,9 @@ export default function LegalMalpracticePrevention() {
         <hr style={{ border: 'none', borderTop: '2px solid var(--color-accent)', marginBottom: '24px', opacity: 0.3 }} />
         <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>RELATED</span>
         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
-          LawStack also watches revenue gaps — unbilled time and unpaid invoices.{' '}
-          <Link to="/apps/unbilled-time-tracker" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>
-            → /apps/unbilled-time-tracker
+          LawStack also closes revenue gaps — unbilled time and unpaid invoices.{' '}
+          <Link to="/law-firm-billing-gaps" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>
+            → /law-firm-billing-gaps
           </Link>
         </p>
       </ContentSidebar>

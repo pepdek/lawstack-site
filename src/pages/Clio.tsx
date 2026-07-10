@@ -17,18 +17,19 @@ const schema = {
   },
 };
 
-const clioDataTable = [
-  { tool: 'Deadline Reminder', data: 'Matter names, statute dates, calendar events, task due dates', path: '/apps/deadline-reminder' },
-  { tool: 'Unbilled Time Tracker', data: 'Uninvoiced time entries, hourly rates, matter names', path: '/apps/unbilled-time-tracker' },
-  { tool: 'New Matter Checklist', data: 'matter.created webhook, matter name and type', path: '/apps/new-matter-checklist' },
-  { tool: 'Taita', data: 'Matter counts, time entries, billing totals, collection rates, trust balances — sourced from your connected practice management system', path: null },
+const bcDataTable = [
+  { category: 'Invoices', data: 'Invoice status, amount, due date, age' },
+  { category: 'Time entries', data: 'Uninvoiced entries, billing rates, matter names' },
+  { category: 'Trust accounts', data: 'Balance totals per client — never transaction records' },
+  { category: 'Matters', data: 'Matter name, status, opened date, responsible attorney' },
+  { category: 'Contacts', data: 'Client display name, contact email' },
 ];
 
 export default function Clio() {
   useEffect(() => {
-    document.title = 'LawStack + Clio — Practice tools that connect to Clio for solo and small law firms';
+    document.title = 'LawStack + Clio — Staff for solo and small law firms that connects to Clio';
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', 'LawStack builds a focused set of tools for Clio users. Read-only Clio API. No write access. No client data stored. WSBA RPC 1.6 compliant. Available in the Clio App Directory.');
+    if (desc) desc.setAttribute('content', 'LawStack connects to Clio to fill the non-legal staff roles solo and small firms cannot afford to hire. Read-only Clio API. No write access. No client data stored. WSBA RPC 1.6 compliant.');
   }, []);
 
   const sidebar = (
@@ -49,7 +50,7 @@ export default function Clio() {
         <Breadcrumb items={[{ name: 'LawStack', href: '/' }, { name: 'Clio integration', href: '/clio' }]} />
         <h1 style={{ marginBottom: '24px' }}>LawStack tools that work with Clio</h1>
         <p style={{ fontSize: 'var(--text-lg)', marginBottom: '48px' }}>
-          LawStack builds a focused set of tools for attorneys who use Clio Manage. Each tool connects to Clio via OAuth, reads one category of operational data, and delivers a plain-text email when something needs attention. No dashboard. No login after setup. Available individually in the Clio App Directory.
+          LawStack connects to Clio to fill the non-legal staff roles solo and small firms cannot afford to hire. One OAuth connection gives the Billing Coordinator read access to your invoices, trust accounts, time entries, and matters. It watches the billing layer of your practice automatically and reports every Monday morning.
         </p>
 
         <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '20px' }}>How the Clio connection works</h2>
@@ -68,29 +69,28 @@ export default function Clio() {
           ))}
         </ul>
 
-        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '20px' }}>What LawStack reads from Clio (by tool)</h2>
-        <div style={{ overflowX: 'auto', marginBottom: '48px' }}>
+        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '20px' }}>What the Billing Coordinator reads from Clio</h2>
+        <div style={{ overflowX: 'auto', marginBottom: '16px' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 'var(--text-sm)' }}>
             <thead>
               <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
-                <th style={{ textAlign: 'left', padding: '10px 0', color: 'var(--color-muted)', fontWeight: 500, paddingRight: '24px' }}>Tool</th>
-                <th style={{ textAlign: 'left', padding: '10px 0', color: 'var(--color-muted)', fontWeight: 500 }}>Clio data accessed</th>
+                <th style={{ textAlign: 'left', padding: '10px 0', color: 'var(--color-muted)', fontWeight: 500, paddingRight: '24px' }}>Category</th>
+                <th style={{ textAlign: 'left', padding: '10px 0', color: 'var(--color-muted)', fontWeight: 500 }}>Data accessed</th>
               </tr>
             </thead>
             <tbody>
-              {clioDataTable.map(row => (
-                <tr key={row.tool} style={{ borderBottom: '1px solid var(--color-border)' }}>
-                  <td style={{ padding: '12px 0', paddingRight: '24px', color: 'var(--color-body)', verticalAlign: 'top' }}>
-                    {row.path ? (
-                      <Link to={row.path} style={{ color: 'var(--color-accent)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>{row.tool}</Link>
-                    ) : row.tool}
-                  </td>
+              {bcDataTable.map(row => (
+                <tr key={row.category} style={{ borderBottom: '1px solid var(--color-border)' }}>
+                  <td style={{ padding: '12px 0', paddingRight: '24px', color: 'var(--color-headline)', fontWeight: 500, verticalAlign: 'top', whiteSpace: 'nowrap' }}>{row.category}</td>
                   <td style={{ padding: '12px 0', color: 'var(--color-body)' }}>{row.data}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', marginBottom: '48px' }}>
+          The Billing Coordinator reads nothing beyond this list. No case facts. No communications. No document content. No client confidential information of any kind.
+        </p>
 
         <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>What LawStack never reads from Clio</h2>
         <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '48px' }}>
@@ -109,16 +109,10 @@ export default function Clio() {
         </ul>
 
         <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>Clio App Directory</h2>
-        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '48px' }}>
-          {[
-            'Deadline Reminder: listed in the Clio App Directory (App ID: pending security review)',
-            'Unbilled Time Tracker: listed in the Clio App Directory (App ID: pending security review)',
-            'New Matter Checklist: listed in the Clio App Directory (App ID: 33743)',
-            'Additional tools will be submitted individually upon launch',
-          ].map((item, i) => (
-            <li key={i} style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', padding: '8px 0', borderBottom: '1px solid var(--color-border)' }}>{item}</li>
-          ))}
-        </ul>
+        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', marginBottom: '48px' }}>
+          Billing Coordinator by LawStack is listed in the Clio App Directory. Install from the directory or connect directly at{' '}
+          <a href="https://billingcoordinator.lawstack.co" style={{ color: 'var(--color-accent)', minHeight: 'auto', minWidth: 'auto' }}>billingcoordinator.lawstack.co</a>.
+        </p>
 
         <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>Which Clio plans are compatible?</h2>
         <p style={{ marginBottom: '48px' }}>

@@ -195,7 +195,7 @@ export default function LawFirmBillingGaps() {
         </p>
 
         {/* Unbilled Time Tracker section */}
-        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>The creation gap — Unbilled Time Tracker</h2>
+        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>The creation gap — what the Billing Coordinator watches</h2>
         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', marginBottom: '20px' }}>
           Unbilled Time Tracker reads every uninvoiced time entry in Clio once a week. Every Sunday at 6pm, one plain-text email arrives: every unbilled entry, its estimated dollar value, and a direct link to invoice it in one click. The attorney does not need to run a report, open a dashboard, or remember to check. The email arrives. The attorney invoices what they choose. The creation gap closes.
         </p>
@@ -223,18 +223,17 @@ export default function LawFirmBillingGaps() {
             </ul>
           </div>
         </div>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--color-accent)', marginBottom: '16px' }}>$49/month. Day one charge.</p>
         <Link
-          to="/apps/unbilled-time-tracker"
+          to="/billing-coordinator"
           style={{ color: 'var(--color-accent)', fontSize: 'var(--text-sm)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
         >
-          Unbilled Time Tracker — connect Clio →
+          The Billing Coordinator scans every open matter for uninvoiced time entries every morning and surfaces them in the Monday brief. →
         </Link>
 
         {tealRule}
 
         {/* Invoice Reminder section */}
-        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>The collection gap — Invoice Reminder</h2>
+        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: '16px' }}>The collection gap — what the Billing Coordinator closes</h2>
         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', marginBottom: '20px' }}>
           Invoice Reminder watches every outstanding invoice in Clio. When an invoice crosses the attorney's configured threshold — 30 days by default — a professional payment reminder goes to the client. The attorney approves the template once at setup. After that, the sequence runs automatically: up to three touches, stopping the moment payment is received in Clio. The attorney never makes a collections call. The awkward follow-up becomes infrastructure.
         </p>
@@ -262,16 +261,13 @@ export default function LawFirmBillingGaps() {
             </ul>
           </div>
         </div>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--color-accent)', marginBottom: '16px' }}>$59/month. Day one charge. Coming soon.</p>
         <p style={{ fontSize: 'var(--text-sm)', marginBottom: '48px' }}>
           <Link
-            to="/apps/invoice-reminder"
+            to="/billing-coordinator"
             style={{ color: 'var(--color-accent)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
           >
-            Invoice Reminder — join the waitlist →
+            The Billing Coordinator watches every outstanding invoice in Clio, queues professional payment reminders for attorney approval, and stops the sequence the moment payment is received. →
           </Link>
-          {' '}
-          <span style={{ color: 'var(--color-muted)' }}>(coming soon)</span>
         </p>
 
         {/* Realization rate */}
