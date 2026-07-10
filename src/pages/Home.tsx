@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { EmailMockup } from '../components/EmailMockup';
+import { MondayBriefMockup } from '../components/MondayBriefMockup';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -20,9 +20,9 @@ const schema = {
 
 export default function Home() {
   useEffect(() => {
-    document.title = "LawStack — Your Clio account is already tracking everything. Nobody's watching.";
+    document.title = 'LawStack — The staff your firm can\'t afford to hire.';
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', 'Single-function tools that connect to Clio, watch one part of your practice, and email you when something needs attention. No login. No dashboard. No setup after connect.');
+    if (desc) desc.setAttribute('content', 'LawStack fills the staff roles solo and small law firms cannot afford to hire. Already knows Clio. Reports every Monday. Billing Coordinator live at $149/month.');
   }, []);
 
   return (
@@ -34,13 +34,15 @@ export default function Home() {
           <div className="hero-grid" style={{ display: 'contents' }}>
             <div>
               <span className="eyebrow" style={{ display: 'block', marginBottom: '20px' }}>
-                BUILT FOR SOLOS AND SMALL FIRMS · CLIO-CONNECTED · NO DASHBOARD
+                THE STAFF YOUR FIRM NEEDS. AT A PRICE IT CAN AFFORD.
               </span>
               <h1 style={{ marginBottom: '24px' }}>
-                Your Clio account is already tracking everything. Nobody's watching.
+                The staff your firm<br />can't afford to hire.
               </h1>
               <p style={{ fontSize: 'var(--text-lg)', color: 'var(--color-body)', marginBottom: '32px', maxWidth: '560px' }}>
-                LawStack connects to Clio in 90 seconds. It watches your deadlines, your unbilled time, your unpaid invoices, your trust balances. One email per tool, on schedule, no login required. You practice law. LawStack watches the practice.
+                A 3-attorney firm can't justify a $65K billing coordinator,
+                a $55K admin assistant, or a $50K intake coordinator.
+                LawStack fills those roles. Already knows Clio. Reports every Monday.
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
                 <Link
@@ -61,7 +63,7 @@ export default function Home() {
               </p>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <EmailMockup />
+              <MondayBriefMockup />
             </div>
           </div>
         </div>
@@ -77,7 +79,7 @@ export default function Home() {
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE GAP</span>
           <h2 style={{ marginBottom: '48px', maxWidth: '720px' }}>
-            You're billing 5 hours. Working 9. The other 4 are running a business you didn't sign up for.
+            You're billing 5 hours. Working 9.<br />The other 4 are running a business nobody hired you to run.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 'var(--space-5)' }}>
             {[
@@ -111,26 +113,26 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <section style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
-          <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>THE MODEL</span>
+          <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>HOW IT WORKS</span>
           <h2 style={{ marginBottom: '48px', maxWidth: '640px' }}>
-            Connect once. It watches. You practice.
+            One connect. Five employees. Zero configuration.
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)', maxWidth: '720px' }}>
             {[
               {
                 n: '01',
-                title: 'Connect Clio in 90 seconds.',
-                body: 'Read-only access. We never write. We never store client data.',
+                title: 'Connect Clio once.',
+                body: 'Read-only access. 90 seconds. We never write to your account. We never touch client data.',
               },
               {
                 n: '02',
-                title: 'Each tool watches one thing.',
-                body: 'Deadlines. Unbilled time. Unpaid invoices. Trust balances. One problem. One email.',
+                title: 'Your employees start immediately.',
+                body: 'Each role watches its domain — billing, admin, intake, ops. Every internal task runs autonomously from day one.',
               },
               {
                 n: '03',
-                title: 'Your inbox is the product.',
-                body: 'No dashboard. No login. No configuration after setup. The email arrives. You act on it. Done.',
+                title: 'Monday morning, they report in.',
+                body: 'One email per role. What was handled. What needs your call. 90 seconds to read. You go practice law.',
               },
             ].map(step => (
               <div key={step.n} style={{ display: 'flex', gap: 'var(--space-5)', alignItems: 'flex-start' }}>
@@ -154,7 +156,7 @@ export default function Home() {
             THE STAFF YOUR FIRM NEEDS. AT A PRICE IT CAN AFFORD.
           </span>
           <h2 style={{ marginBottom: 'var(--space-4)', maxWidth: '640px' }}>
-            Your AI-employee team.
+            Your firm. Fully staffed.
           </h2>
           <p style={{ fontSize: 'var(--text-lg)', color: 'var(--color-body)', lineHeight: 1.65, maxWidth: '600px', marginBottom: 'var(--space-7)' }}>
             Small firms can't justify a $65K billing coordinator, a $55K admin
@@ -366,11 +368,15 @@ export default function Home() {
       <section id="pricing" style={{ background: 'var(--color-bg)', padding: 'var(--space-7) var(--space-5)' }}>
         <div style={{ maxWidth: 'var(--max-wide)', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'block', marginBottom: '16px' }}>PRICING</span>
-          <h2 style={{ marginBottom: '24px' }}>Start free. Add what you need.</h2>
-          <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)' }}>
-            Pricing starts at free.{' '}
-            <a href="mailto:hello@lawstack.co" style={{ color: 'var(--color-muted)', minHeight: 'auto', minWidth: 'auto' }}>Email hello@lawstack.co</a>
-            {' '}for details.
+          <h2 style={{ marginBottom: '24px' }}>One role. One price. No surprises.</h2>
+          <p style={{ fontSize: 'var(--text-lg)', fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--color-headline)', marginBottom: '8px' }}>
+            Billing Coordinator — $149/month
+          </p>
+          <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)', marginBottom: '4px' }}>
+            The math: one recovered invoice covers two months.
+          </p>
+          <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-body)' }}>
+            30-day money-back guarantee. Cancel anytime.
           </p>
         </div>
       </section>

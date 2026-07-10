@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 
 const NAV_LINKS = [
-  { label: 'Tools', href: '/tools' },
+  { label: 'Roles', href: '/tools' },
   { label: 'Clio', href: '/clio' },
   { label: 'About', href: '/about' },
   { label: 'Changelog', href: '/changelog' },

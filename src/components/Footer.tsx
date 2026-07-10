@@ -3,9 +3,8 @@ import { Logo } from './Logo';
 
 const TOOLS_LINKS = [
   { label: 'Billing Coordinator', href: '/#billing-coordinator', external: false },
-  { label: 'Practice Coordinator', href: '/#practice-coordinator', external: false },
-  { label: 'Client Coordinator', href: '/#client-coordinator', external: false },
-  { label: 'Taita (Practice Intelligence)', href: 'https://iq.lawstack.co', external: true },
+  { label: 'Legal Admin Assistant', href: '/#legal-admin-assistant', external: false },
+  { label: 'Client Intake Coordinator', href: '/#client-intake-coordinator', external: false },
 ];
 
 const COMPANY_LINKS = [
