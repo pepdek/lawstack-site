@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { useFadeIn } from '../hooks/useFadeIn';
 import { MondayBriefMockup } from '../components/MondayBriefMockup';
 
@@ -428,22 +427,6 @@ export default function BillingCoordinator() {
           </a>
           <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', marginTop: 'var(--space-3)' }}>
             $149/month. 30-day money-back if it doesn't earn its keep.
-          </p>
-          <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginTop: 'var(--space-8)' }}>
-            Part of the LawStack practice operations stack.{' '}
-            Also:{' '}
-            <Link to="/apps/unbilled-time-tracker" style={{ color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-accent)'; (e.currentTarget as HTMLElement).style.textDecoration = 'underline'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-muted)'; (e.currentTarget as HTMLElement).style.textDecoration = 'none'; }}
-            >Unbilled Time Tracker</Link>{' '}·{' '}
-            <Link to="/apps/invoice-reminder" style={{ color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-accent)'; (e.currentTarget as HTMLElement).style.textDecoration = 'underline'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-muted)'; (e.currentTarget as HTMLElement).style.textDecoration = 'none'; }}
-            >Invoice Reminder</Link>{' '}·{' '}
-            <Link to="/apps/trust-account-alert" style={{ color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-accent)'; (e.currentTarget as HTMLElement).style.textDecoration = 'underline'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-muted)'; (e.currentTarget as HTMLElement).style.textDecoration = 'none'; }}
-            >Trust Account Alert</Link>
           </p>
         </div>
       </section>
