@@ -169,7 +169,7 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-5)' }}>
 
             {/* Card 1 — Billing Coordinator (LIVE) */}
-            <div style={{
+            <div id="billing-coordinator" style={{
               background: 'var(--color-surface)',
               borderRadius: 'var(--radius-lg)',
               padding: 'var(--space-6)',
@@ -218,7 +218,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 — Legal Admin Assistant (COMING SOON) */}
-            <div style={{
+            <div id="legal-admin-assistant" style={{
               background: 'var(--color-surface)',
               borderRadius: 'var(--radius-lg)',
               padding: 'var(--space-6)',
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 — Client Intake Coordinator (COMING SOON) */}
-            <div style={{
+            <div id="client-intake-coordinator" style={{
               background: 'var(--color-surface)',
               borderRadius: 'var(--radius-lg)',
               padding: 'var(--space-6)',
