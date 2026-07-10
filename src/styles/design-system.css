@@ -9,9 +9,10 @@
   --color-surface-deep:  #0A2926;
   --color-headline:      #FFFFFF;
   --color-body:          #99F6E4;
-  --color-muted:         rgba(153, 246, 228, 0.50);
+  --color-muted:         rgba(153, 246, 228, 0.65);
   --color-accent:        #14B8A6;
   --color-accent-hover:  #0D9488;
+  --color-link:          #5EEAD4;  /* text links only — WCAG AA 5.2:1 on teal-800 bg */
   --color-cta:           #A3E635;
   --color-cta-text:      #1A1A1A;
   --color-cta-hover:     #8FCF1E;
@@ -80,8 +81,9 @@ h1 { font-size: clamp(var(--text-4xl), 6vw, var(--text-5xl)); }
 h2 { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); }
 h3 { font-size: var(--text-2xl); }
 p { color: var(--color-body); line-height: var(--leading-body); }
-a { color: var(--color-accent); text-decoration: none; }
-a:hover { color: var(--color-accent-hover); text-decoration: underline; }
+a { color: var(--color-link); text-decoration: none; transition: color 150ms ease; }
+a:hover { color: var(--color-headline); text-decoration: underline; }
+a:focus { outline: 2px solid var(--color-accent); outline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
 button, a, [role="button"] { min-height: 44px; min-width: 44px; }
 

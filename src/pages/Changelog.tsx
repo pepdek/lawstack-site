@@ -58,7 +58,7 @@ export default function Changelog() {
               fontSize: 'var(--text-xs)',
               fontWeight: 500,
               padding: '6px 14px',
-              borderRadius: 'var(--radius-pill)',
+              borderRadius: 'var(--radius-md)',
               border: active === f ? '1px solid var(--color-accent)' : '1px solid var(--color-border)',
               background: 'transparent',
               color: active === f ? 'var(--color-body)' : 'var(--color-muted)',

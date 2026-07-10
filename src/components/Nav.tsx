@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: 'Changelog', href: '/changelog' },
 ];
 
-const NAV_CTA = { label: 'Get started free', href: 'https://deadline.lawstack.co' };
+const NAV_CTA = { label: 'Try Billing Coordinator', href: 'https://billingcoordinator.lawstack.co' };
 
 export default function Nav() {
   const location = useLocation();

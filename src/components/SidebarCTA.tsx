@@ -78,13 +78,22 @@ export function SidebarCTA({
             fontFamily: 'var(--font-sans)',
             fontWeight: 500,
             fontSize: 'var(--text-sm)',
-            padding: '12px 20px',
+            padding: '11px 22px',
             borderRadius: 'var(--radius-md)',
-            border: '1px solid var(--color-border-strong)',
+            border: '1px solid rgba(153, 246, 228, 0.40)',
             textDecoration: 'none',
             width: '100%',
             marginBottom: '20px',
             minHeight: '44px',
+            transition: 'border-color 150ms ease, color 150ms ease',
+          }}
+          onMouseEnter={e => {
+            (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-accent)';
+            (e.currentTarget as HTMLElement).style.color = 'var(--color-headline)';
+          }}
+          onMouseLeave={e => {
+            (e.currentTarget as HTMLElement).style.borderColor = 'rgba(153, 246, 228, 0.40)';
+            (e.currentTarget as HTMLElement).style.color = 'var(--color-body)';
           }}
         >
           {secondaryLabel}

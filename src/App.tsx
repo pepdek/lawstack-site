@@ -1,10 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
 const Home = lazy(() => import('./pages/Home'));
-const Tools = lazy(() => import('./pages/Tools'));
 const Clio = lazy(() => import('./pages/Clio'));
 const About = lazy(() => import('./pages/About'));
 const Changelog = lazy(() => import('./pages/Changelog'));
@@ -48,7 +47,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 const router = createBrowserRouter([
   { path: '/', element: <Layout><Home /></Layout> },
-  { path: '/tools', element: <Layout><Tools /></Layout> },
+  { path: '/tools', element: <Navigate to="/" replace /> },
   { path: '/clio', element: <Layout><Clio /></Layout> },
   { path: '/about', element: <Layout><About /></Layout> },
   { path: '/changelog', element: <Layout><Changelog /></Layout> },
