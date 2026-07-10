@@ -32,6 +32,11 @@ const sectionPad: React.CSSProperties = {
   padding: 'var(--space-10) var(--space-5)',
 };
 
+const sectionSurface: React.CSSProperties = {
+  background: 'var(--color-surface)',
+  padding: 'var(--space-10) var(--space-5)',
+};
+
 const inner: React.CSSProperties = { maxWidth: '840px', margin: '0 auto' };
 
 const eyebrowStyle: React.CSSProperties = {
@@ -145,7 +150,7 @@ function AgencyArc() {
       }}>
         TWELVE WEEKS TO FULL AUTONOMY
       </p>
-      <h2 style={{ ...h2Style, textAlign: 'center', marginTop: 'var(--space-3)' }}>
+      <h2 className="agency-arc-h2" style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-headline)', letterSpacing: '-0.02em', lineHeight: 1.1, textAlign: 'center', marginTop: 'var(--space-3)' }}>
         It earns the right to act alone.
       </h2>
       <div style={{
@@ -233,7 +238,7 @@ export default function BillingCoordinator() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* Section 1 — Hero */}
-      <section id="main-content" style={{ ...sectionPad, paddingTop: 'var(--space-10)' }}>
+      <section id="main-content" style={{ ...sectionPad, paddingTop: 'var(--space-10)', paddingBottom: 'var(--space-8)' }}>
         <div style={inner}>
           <span style={eyebrowStyle}>BILLING COORDINATOR FOR LAW FIRMS</span>
           <h1 style={{
@@ -288,8 +293,34 @@ export default function BillingCoordinator() {
         </div>
       </section>
 
+      {/* Stats bar */}
+      <div className="stats-bar" style={{
+        background: 'var(--color-surface)',
+        width: '100%',
+        padding: 'var(--space-6) var(--space-5)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 'var(--space-8)',
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 'var(--text-3xl)', color: 'var(--color-headline)', lineHeight: 1, margin: 0 }}>48</p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 400, fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBlockStart: 'var(--space-1)', margin: 0 }}>tasks run every week</p>
+        </div>
+        <div className="stats-divider" style={{ width: '1px', height: '32px', background: 'var(--color-border)', flexShrink: 0 }} />
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 'var(--text-3xl)', color: 'var(--color-headline)', lineHeight: 1, margin: 0 }}>90 sec</p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 400, fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBlockStart: 'var(--space-1)', margin: 0 }}>to read the Monday brief</p>
+        </div>
+        <div className="stats-divider" style={{ width: '1px', height: '32px', background: 'var(--color-border)', flexShrink: 0 }} />
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 'var(--text-3xl)', color: 'var(--color-headline)', lineHeight: 1, margin: 0 }}>$149/mo</p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 400, fontSize: 'var(--text-sm)', color: 'var(--color-muted)', marginBlockStart: 'var(--space-1)', margin: 0 }}>vs. $65,000/year</p>
+        </div>
+      </div>
+
       {/* Section 2 — Pain Identification */}
-      <section ref={s2} style={sectionPad}>
+      <section ref={s2} style={{ ...sectionPad, paddingTop: 'var(--space-8)' }}>
         <div style={inner}>
           <span style={eyebrowStyle}>WHAT THIS FIXES</span>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'var(--space-5)' }}>
@@ -309,7 +340,7 @@ export default function BillingCoordinator() {
       </section>
 
       {/* Section 3 — Comparison */}
-      <section ref={s3} style={sectionPad}>
+      <section ref={s3} style={sectionSurface}>
         <div style={inner}>
           <h2 style={h2Style}>You have three options.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'var(--space-5)', marginTop: 'var(--space-6)' }}>
@@ -333,7 +364,7 @@ export default function BillingCoordinator() {
       </section>
 
       {/* Section 4 — Job Description */}
-      <section ref={s4} style={sectionPad}>
+      <section ref={s4} style={sectionSurface}>
         <div style={inner}>
           <h2 style={h2Style}>Here is what it does.</h2>
           <p style={{ fontSize: 'var(--text-lg)', color: 'var(--color-body)', lineHeight: 1.65, marginTop: 'var(--space-4)' }}>
@@ -363,7 +394,7 @@ export default function BillingCoordinator() {
       </section>
 
       {/* Section 4.5 — Proof Moment + Agency Arc */}
-      <section style={sectionPad}>
+      <section style={sectionSurface}>
         <div style={inner}>
           <ProofMoment />
           <AgencyArc />
@@ -371,7 +402,7 @@ export default function BillingCoordinator() {
       </section>
 
       {/* Section 5 — Monday Brief */}
-      <section ref={s5} style={sectionPad}>
+      <section ref={s5} style={sectionSurface}>
         <div style={inner}>
           <h2 style={h2Style}>This is what Monday looks like.</h2>
           <MondayBriefMockup />
@@ -451,6 +482,10 @@ export default function BillingCoordinator() {
       )}
       <style>{`
         @media (min-width: 680px) { .billing-mobile-bar { display: none !important; } }
+        .agency-arc-h2 { font-size: var(--text-4xl); }
+        @media (max-width: 639px) { .agency-arc-h2 { font-size: var(--text-3xl); } }
+        @media (max-width: 639px) { .stats-bar { flex-direction: column !important; gap: var(--space-5) !important; } }
+        @media (max-width: 639px) { .stats-divider { display: none; } }
       `}</style>
     </>
   );
