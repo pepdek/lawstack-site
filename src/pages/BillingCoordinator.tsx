@@ -272,24 +272,17 @@ export default function BillingCoordinator() {
                 textDecoration: 'none', minHeight: '44px',
               }}
             >
-              Connect Your Clio.
+              Connect Your Clio
             </a>
             <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', marginTop: 'var(--space-2)' }}>
               $149/month. 10 minutes to connect. First brief Monday morning.
             </p>
           </div>
-          {/* HOLD: replace with verified subscriber data before launch */}
-          <div style={{ marginTop: 'var(--space-7)', padding: 'var(--space-5)', background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', maxWidth: '560px' }}>
-            <p style={{ fontSize: 'var(--text-base)', color: 'var(--color-body)', lineHeight: 1.65, margin: 0 }}>
-              The average solo firm carries{' '}
-              <strong style={{ color: 'var(--color-headline)', fontWeight: 600 }}>$[X]</strong>{' '}
-              in AR past 30 days. Billing Coordinator reduces average days-to-payment by{' '}
-              <strong style={{ color: 'var(--color-headline)', fontWeight: 600 }}>[N] days</strong>.
-              {' '}That is{' '}
-              <strong style={{ color: 'var(--color-headline)', fontWeight: 600 }}>$[Y]</strong>{' '}
-              in recovered cash flow per month. You are paying $149 for it.
-            </p>
-          </div>
+          {/* MATH ANCHOR — HOLD FOR VERIFIED SUBSCRIBER DATA
+              Do not publish until first attorney provides real before/after AR figures.
+              Format: "The average solo firm carries $X in AR past 30 days.
+              Billing Coordinator reduces average days-to-payment by N days.
+              That is $Y in recovered cash flow per month. You are paying $149 for it." */}
         </div>
       </section>
 
@@ -454,7 +447,7 @@ export default function BillingCoordinator() {
               textDecoration: 'none', minHeight: '44px',
             }}
           >
-            Connect Your Clio.
+            Connect Your Clio
           </a>
           <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', marginTop: 'var(--space-3)' }}>
             $149/month. 30-day money-back if it doesn't earn its keep.

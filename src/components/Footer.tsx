@@ -23,7 +23,7 @@ const LEGAL_LINKS = [
 
 const footerLinkStyle = {
   fontSize: 'var(--text-xs)',
-  color: 'var(--color-muted)',
+  color: 'var(--color-link)',
   textDecoration: 'none',
   display: 'block',
   padding: '3px 0',
@@ -37,14 +37,14 @@ function FooterLink({ href, label, external }: { href: string; label: string; ex
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" style={footerLinkStyle}
         onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-headline)')}
-        onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-muted)')}
+        onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-link)')}
       >{label}</a>
     );
   }
   return (
     <Link to={href} style={footerLinkStyle}
       onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-headline)')}
-      onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-muted)')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-link)')}
     >{label}</Link>
   );
 }
@@ -134,7 +134,7 @@ export default function Footer() {
           <span style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)' }}>
             © 2026 LawStack Inc. All rights reserved.
           </span>
-          <a href="mailto:hello@lawstack.co" style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
+          <a href="mailto:hello@lawstack.co" style={{ fontSize: 'var(--text-xs)', color: 'var(--color-link)', textDecoration: 'none', minHeight: 'auto', minWidth: 'auto' }}>
             hello@lawstack.co
           </a>
         </div>

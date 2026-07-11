@@ -32,9 +32,9 @@ export function MondayBriefMockup() {
         <div style={{ background: '#F9F9F9', borderRadius: '8px', padding: '12px', marginBottom: '8px' }}>
           <p style={{ fontSize: '13px', color: '#1A1A1A' }}>Johnson / Custody dispute — $3,200 overdue 32 days</p>
           <div style={{ display: 'flex', gap: '8px', marginTop: '10px' }}>
-            <button style={{ background: 'var(--color-cta)', color: 'var(--color-cta-text)', border: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600, cursor: 'default' }}>Approve</button>
-            <button style={{ background: 'transparent', border: '1px solid #DDD', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', color: '#666', cursor: 'default' }}>Edit + Approve</button>
-            <button style={{ background: 'transparent', border: '1px solid #DDD', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', color: '#666', cursor: 'default' }}>Skip</button>
+            <button style={{ background: 'var(--color-cta)', color: 'var(--color-cta-text)', border: 'none', borderRadius: 'var(--radius-md)', padding: '6px 14px', fontSize: '12px', fontWeight: 600, cursor: 'default' }}>Approve</button>
+            <button style={{ background: 'transparent', border: '1px solid rgba(153, 246, 228, 0.40)', borderRadius: 'var(--radius-md)', padding: '6px 14px', fontSize: '12px', color: 'var(--color-body)', cursor: 'default' }}>Edit + Approve</button>
+            <button style={{ background: 'transparent', border: '1px solid rgba(153, 246, 228, 0.40)', borderRadius: 'var(--radius-md)', padding: '6px 14px', fontSize: '12px', color: 'var(--color-body)', cursor: 'default' }}>Skip</button>
           </div>
         </div>
         <p style={{ fontSize: '12px', fontWeight: 600, color: '#1A1A1A', margin: '20px 0 8px' }}>

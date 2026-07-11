@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import { Suspense, lazy } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 
 const Home = lazy(() => import('./pages/Home'));
 const Clio = lazy(() => import('./pages/Clio'));
@@ -38,6 +39,7 @@ function Loading() {
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <ScrollToTop />
       <Nav />
       <Suspense fallback={<Loading />}>{children}</Suspense>
       <Footer />
