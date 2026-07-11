@@ -27,6 +27,9 @@ const SoloLawFirmTools = lazy(() => import('./pages/SoloLawFirmTools'));
 const LegalMalpracticePrevention = lazy(() => import('./pages/LegalMalpracticePrevention'));
 const LawFirmBillingGaps = lazy(() => import('./pages/LawFirmBillingGaps'));
 const BillingCoordinator = lazy(() => import('./pages/BillingCoordinator'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const LegalAdminAssistant = lazy(() => import('./pages/LegalAdminAssistant'));
+const ClientIntakeCoordinator = lazy(() => import('./pages/ClientIntakeCoordinator'));
 
 function Loading() {
   return (
@@ -72,6 +75,9 @@ const router = createBrowserRouter([
   { path: '/legal-malpractice-prevention', element: <Layout><LegalMalpracticePrevention /></Layout> },
   { path: '/law-firm-billing-gaps', element: <Layout><LawFirmBillingGaps /></Layout> },
   { path: '/billing-coordinator', element: <Layout><BillingCoordinator /></Layout> },
+  { path: '/pricing', element: <Layout><Pricing /></Layout> },
+  { path: '/legal-admin-assistant', element: <Layout><LegalAdminAssistant /></Layout> },
+  { path: '/client-intake-coordinator', element: <Layout><ClientIntakeCoordinator /></Layout> },
 ]);
 
 export default function App() {
